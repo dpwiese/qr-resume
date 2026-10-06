@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="Daniel Wiese — engineer, aviation professional, and technology leader.">
+  <title>Daniel Wiese</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172521;
+      --muted: #65716b;
+      --accent: #176b58;
+      --paper: #f5f4f0;
+      --card: #fffefa;
+      --line: #e4e4dc;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #104a3d; }
+    a:focus-visible { outline: 3px solid #8ac6b4; outline-offset: 4px; border-radius: 2px; }
+    .page { width: min(100% - 40px, 850px); margin: 0 auto; }
+    header { padding: 64px 0 48px; }
+    .identity { display: flex; align-items: center; gap: 30px; }
+    .portrait {
+      width: 126px; height: 126px; flex: 0 0 126px; object-fit: cover;
+      border-radius: 50%; border: 4px solid var(--card); box-shadow: 0 4px 18px #17252116;
+    }
+    .eyebrow { margin: 0 0 9px; color: var(--accent); font-size: .74rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { margin: 0; font: 500 clamp(2.4rem, 7vw, 4.25rem)/1.05 var(--sans); letter-spacing: -.045em; }
+    .tagline { margin: 13px 0 0; color: var(--muted); font-size: 1.03rem; }
+    .location { display: inline-flex; align-items: center; gap: 7px; margin: 9px 0 0; color: var(--accent); font-size: .84rem; font-weight: 650; letter-spacing: .025em; }
+    .location svg { width: 15px; height: 15px; }
+    .intro { max-width: 700px; margin: 34px 0 0; font: 1.2rem/1.7 var(--sans); color: #36433e; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 24px; font-size: .9rem; font-weight: 600; }
+    main { padding-bottom: 56px; }
+    .section { display: grid; grid-template-columns: 175px 1fr; gap: 28px; padding: 31px 0; border-top: 1px solid var(--line); }
+    h2 { margin: 2px 0 0; color: var(--muted); font-size: .74rem; letter-spacing: .16em; line-height: 1.5; text-transform: uppercase; }
+    .section-content > p:first-child { margin-top: 0; }
+    .section-content p { margin: 0 0 13px; }
+    .dash-list { margin: 0 0 14px; padding-left: 2rem; list-style: circle; color: #36433e; }
+    .role { margin: 0 0 23px; }
+    .role:last-child { margin-bottom: 0; }
+    .role-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+    h3 { margin: 0; font-size: 1.05rem; font-weight: 700; letter-spacing: -.015em; }
+    .date { flex: 0 0 auto; color: var(--muted); font-size: .81rem; }
+    .role-title { margin: 2px 0 0; color: var(--muted); font-size: .92rem; }
+    .role-description { margin: 8px 0 0; color: #36433e; font-size: .94rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .chip { padding: 5px 10px; border: 1px solid var(--line); border-radius: 999px; color: #43504a; font-size: .8rem; }
+    footer { display: flex; align-items: center; justify-content: space-between; gap: 18px; border-top: 1px solid var(--line); padding: 21px 0 36px; color: var(--muted); font-size: .82rem; }
+    .social-link { display: inline-flex; align-items: center; gap: 9px; color: var(--muted); font-weight: 600; text-decoration: none; }
+    .social-link:hover { color: var(--accent); }
+    .social-link svg { width: 22px; height: 22px; }
+    @media (max-width: 620px) {
+      .page { width: min(100% - 36px, 520px); }
+      header { padding: 38px 0 35px; }
+      .identity { gap: 18px; }
+      .portrait { width: 88px; height: 88px; flex-basis: 88px; border-width: 3px; }
+      .eyebrow { font-size: .66rem; }
+      .tagline { font-size: .9rem; line-height: 1.45; }
+      .location { margin-top: 7px; font-size: .79rem; }
+      .intro { margin-top: 25px; font-size: 1.1rem; }
+      .section { grid-template-columns: 1fr; gap: 15px; padding: 25px 0; }
+      .role-heading { display: block; }
+      .date { display: block; margin-top: 2px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="identity">
+        <img class="portrait" src="profile.webp" alt="Portrait of Daniel Wiese" width="126" height="126">
+        <div>
+          <p class="eyebrow">Pilot · Engineer · Builder</p>
+          <h1>Daniel Wiese</h1>
+          <p class="tagline">Commercial pilot and Gold Seal CFII / MEI / AGI / IGI.</p>
+          <p class="location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Dallas, TX</p>
+        </div>
+      </div>
+      <!-- <p class="intro">I work across aerospace engineering and aviation, bringing teams together to turn complex technical challenges into dependable systems. Outside of engineering, I teach and fly.</p> -->
+    </header>
+
+    <main>
+
+      <section class="section" aria-labelledby="aviation-heading">
+        <h2 id="aviation-heading">Aviation Experience</h2>
+        <div class="section-content">
+          <p>Experience flying for more than fifteen years across more than a dozen different aircraft types, and a variety of avionics packages.</p>
+          <ul class="dash-list">
+            <li>1,442 total time</li>
+            <li>1,378 PIC</li>
+            <li>335 XC</li>
+            <li>116 actual / simulated instrument</li>
+            <li>51 AMEL</li>
+          </ul>
+          <div class="chips" aria-label="Certifications">
+            <span class="chip">CFI</span><span class="chip">CFII</span><span class="chip">MEI</span><span class="chip">AGI</span><span class="chip">IGI</span><span class="chip">Gold Seal Instructor</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="work-heading">
+        <h2 id="work-heading">Work Experience</h2>
+        <div class="section-content">
+          <article class="role">
+            <div class="role-heading"><h3>CAE</h3><span class="date">2026 — Present</span></div>
+            <p class="role-title">Supporting Crew Member · Learjet 40/45</p>
+            <p class="role-description">Responsible for delivering exceptional right seat support to clients participating in FAA-approved 14 CFR 142 curriculum courses in the Learjet 40/45.</p>
+          </article>
+          <article class="role">
+            <div class="role-heading"><h3>Coast Flight Training</h3><span class="date">2024 — Present</span></div>
+            <p class="role-title">Flight Instructor &amp; Check Airman</p>
+            <p class="role-description">Training pilots across private, instrument, commercial, and instructor certificates.</p>
+          </article>
+          <article class="role">
+            <div class="role-heading"><h3>Blue Origin</h3><span class="date">2023 — Present</span></div>
+            <p class="role-title">Senior Manager, Avionics, GNC &amp; Electronics</p>
+            <p class="role-description">Leading guidance, navigation, control, and simulation software for the Lunar Transporter vehicle program, supporting NASA's Artemis V mission.</p>
+          </article>
+          <article class="role">
+            <div class="role-heading"><h3>WHOOP</h3><span class="date">2020 — 2022</span></div>
+            <p class="role-title">Director of R&amp;D</p>
+            <p class="role-description">Built and led a multidisciplinary research and development organization following WHOOP's acquisition of Humon.</p>
+          </article>
+          <article class="role">
+            <div class="role-heading"><h3>Humon</h3><span class="date">2016 — 2020</span></div>
+            <p class="role-title">Co-founder &amp; CTO</p>
+            <p class="role-description">Co-founded a wearable technology company and led development from sensing hardware through software and product delivery.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <div class="section-content">
+          <article class="role">
+            <div class="role-heading"><h3>Massachusetts Institute of Technology</h3><span class="date">2016</span></div>
+            <p class="role-title">Ph.D., Mechanical Engineering</p>
+          </article>
+          <article class="role">
+            <div class="role-heading"><h3>University of California, Davis</h3><span class="date">2011</span></div>
+            <p class="role-title">B.S., Mechanical Engineering · B.S., Aerospace Science &amp; Engineering</p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+    <footer>
+      <span>Daniel Wiese</span>
+      <a class="social-link" href="https://www.linkedin.com/in/dpwiese/" target="_blank" rel="noopener noreferrer" aria-label="Daniel Wiese on LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+    </footer>
+  </div>
+</body>
+</html>
