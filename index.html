@@ -56,8 +56,10 @@
     .section-content > p:first-child { margin-top: 0; }
     .section-content p { margin: 0 0 13px; }
     .dash-list { margin: 0 0 14px; padding-left: 2rem; list-style: circle; color: #36433e; }
-    .role { margin: 0 0 23px; }
+    .role { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 14px; margin: 0 0 23px; }
     .role:last-child { margin-bottom: 0; }
+    .role-logo { grid-column: 1; grid-row: 1 / span 3; width: 44px; height: 44px; object-fit: contain; border: 1px solid var(--line); border-radius: 7px; background: #fff; }
+    .role-copy { grid-column: 2; min-width: 0; }
     .role-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
     h3 { margin: 0; font-size: 1.05rem; font-weight: 700; letter-spacing: -.015em; }
     .date { flex: 0 0 auto; color: var(--muted); font-size: .81rem; }
@@ -89,7 +91,7 @@
   <div class="page">
     <header>
       <div class="identity">
-        <img class="portrait" src="profile.webp" alt="Portrait of Daniel Wiese" width="126" height="126">
+        <img class="portrait" src="img/profile.webp" alt="Portrait of Daniel Wiese" width="126" height="126">
         <div>
           <p class="eyebrow">Pilot · Engineer · Builder</p>
           <h1>Daniel Wiese</h1>
@@ -112,9 +114,15 @@
             <li>335 XC</li>
             <li>116 actual / simulated instrument</li>
             <li>51 AMEL</li>
+            <li>10 tailwheel</li>
           </ul>
           <div class="chips" aria-label="Certifications">
-            <span class="chip">CFI</span><span class="chip">CFII</span><span class="chip">MEI</span><span class="chip">AGI</span><span class="chip">IGI</span><span class="chip">Gold Seal Instructor</span>
+            <span class="chip">Gold Seal Instructor</span>
+            <span class="chip">CFI</span>
+            <span class="chip">CFII</span>
+            <span class="chip">MEI</span>
+            <span class="chip">AGI</span>
+            <span class="chip">IGI</span>
           </div>
         </div>
       </section>
@@ -123,35 +131,53 @@
         <h2 id="work-heading">Work Experience</h2>
         <div class="section-content">
           <article class="role">
+            <img class="role-logo" src="img/cae.webp" alt="" width="44" height="44">
+            <div class="role-copy">
             <div class="role-heading"><h3>CAE</h3><span class="date">2026 — Present</span></div>
             <p class="role-title">Supporting Crew Member · Learjet 40/45</p>
             <p class="role-description">Responsible for delivering exceptional right seat support to clients participating in FAA-approved 14 CFR 142 curriculum courses in the Learjet 40/45.</p>
-          </article>
+                      </div>
+</article>
           <article class="role">
+            <img class="role-logo" src="img/coast.webp" alt="" width="44" height="44">
+            <div class="role-copy">
             <div class="role-heading"><h3>Coast Flight Training</h3><span class="date">2024 — Present</span></div>
             <p class="role-title">Flight Instructor &amp; Check Airman</p>
             <p class="role-description">Training pilots across private, instrument, commercial, and instructor certificates.</p>
-          </article>
+                      </div>
+</article>
           <article class="role">
+            <img class="role-logo" src="img/blue.webp" alt="" width="44" height="44">
+            <div class="role-copy">
             <div class="role-heading"><h3>Blue Origin</h3><span class="date">2023 — Present</span></div>
             <p class="role-title">Senior Manager, Avionics, GNC &amp; Electronics</p>
             <p class="role-description">Leading guidance, navigation, control, and simulation software for the Lunar Transporter vehicle program, supporting NASA's Artemis V mission.</p>
-          </article>
+                      </div>
+</article>
           <article class="role">
+            <img class="role-logo" src="img/avad.webp" alt="" width="44" height="44">
+            <div class="role-copy">
             <div class="role-heading"><h3>Aviation Adventures</h3><span class="date">2022 — 2023</span></div>
             <p class="role-title">Flight Instructor &amp; Check Airman</p>
             <p class="role-description">Provided flight training for private, instrument, commercial, CFI, and CFII candidates; served as an FAA Part 141 designated check instructor and conducted annual instructor standardization checks.</p>
-          </article>
+                      </div>
+</article>
           <article class="role">
+            <img class="role-logo" src="img/whoop.webp" alt="" width="44" height="44">
+            <div class="role-copy">
             <div class="role-heading"><h3>WHOOP</h3><span class="date">2020 — 2022</span></div>
             <p class="role-title">Director of R&amp;D</p>
             <p class="role-description">Built and led a multidisciplinary research and development organization following WHOOP's acquisition of Humon.</p>
-          </article>
+                      </div>
+</article>
           <article class="role">
+            <img class="role-logo" src="img/humon.webp" alt="" width="44" height="44">
+            <div class="role-copy">
             <div class="role-heading"><h3>Humon</h3><span class="date">2016 — 2020</span></div>
             <p class="role-title">Co-founder &amp; CTO</p>
             <p class="role-description">Co-founded a wearable technology company and led development from sensing hardware through software and product delivery.</p>
-          </article>
+                      </div>
+</article>
         </div>
       </section>
 
@@ -159,12 +185,18 @@
         <h2 id="education-heading">Education</h2>
         <div class="section-content">
           <article class="role">
-            <div class="role-heading"><h3>Massachusetts Institute of Technology</h3><span class="date">2016</span></div>
-            <p class="role-title">Ph.D., Mechanical Engineering</p>
+            <img class="role-logo" src="img/mit.webp" alt="" width="44" height="44">
+            <div class="role-copy">
+              <div class="role-heading"><h3>Massachusetts Institute of Technology</h3><span class="date">2016</span></div>
+              <p class="role-title">Ph.D., Mechanical Engineering</p>
+            </div>
           </article>
           <article class="role">
-            <div class="role-heading"><h3>University of California, Davis</h3><span class="date">2011</span></div>
-            <p class="role-title">B.S., Mechanical Engineering · B.S., Aerospace Science &amp; Engineering</p>
+            <img class="role-logo" src="img/davis.webp" alt="" width="44" height="44">
+            <div class="role-copy">
+              <div class="role-heading"><h3>University of California, Davis</h3><span class="date">2011</span></div>
+              <p class="role-title">B.S., Mechanical Engineering · B.S., Aerospace Science &amp; Engineering</p>
+            </div>
           </article>
         </div>
       </section>
